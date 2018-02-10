@@ -8,5 +8,13 @@
 
 
 <ion-content padding>
-
+  <button ion-button full (click)="generateDinners()">Generate Dinners</button>
+  <!--If dinners has been generated.-->
+  <!--Checkbox if groceries has been used.-->
+  <!--Link to dinnerDetailPage(?) which contains recipe onClick?-->
+  <ion-list *ngIf="dinnersHasBeenGenerated">
+    <button ion-item *ngFor="let dinner of chosenDinners" (click)="goToDinnerDetailPage(dinner)">
+      <ion-label>{{ dinner.name }}</ion-label>
+    </button>
+  </ion-list>
 </ion-content>

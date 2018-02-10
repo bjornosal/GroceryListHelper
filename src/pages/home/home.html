@@ -5,10 +5,14 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button full>Generate Dinners</button>
-  <ion-item-group>
-    <ion-item-divider>Groceries</ion-item-divider>
+  <ion-list>
+    <ion-list-header>
+      Groceries
+    </ion-list-header>
     <!--Loop through dinners that are saved in the json file.-->
-    <ion-item ></ion-item>
-  </ion-item-group>
+    <ion-item *ngIf="false">
+      <ion-label><!--Item-name--></ion-label>
+      <ion-checkbox checked="true"><!--If put in basket--></ion-checkbox>
+    </ion-item>
+  </ion-list>
 </ion-content>

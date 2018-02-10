@@ -1,0 +1,16 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ dinner.name }}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item *ngFor="let ingredient of dinner.ingredients">
+    <ion-item-group>
+      <ion-item-divider> {{ ingredient.itemName }}</ion-item-divider>
+      <ion-item>Antall: {{ ingredient.itemQuantity }}</ion-item>
+    </ion-item-group>
+  </ion-item>
+</ion-content>
