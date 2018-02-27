@@ -23,9 +23,10 @@ export class DinnersPage {
   generateDinners() {
     this.chosenDinners = this.getSetAmountOfDinnersAtRandom(dinners, 7);
     this.dinnersHasBeenGenerated = true;
-    new File([JSON.stringify(this.chosenDinners)], "../../assets/json/chosenDinners.json", {
+    
+    /*new File([JSON.stringify(this.chosenDinners)], "../../assets/json/chosenDinners.json", {
       type: "text/json"
-    });
+    });*/
     this.generateIngredientsJsonFileFromCurrentDinners();
   }
 
@@ -61,9 +62,9 @@ export class DinnersPage {
         }
       }
     }
-    new File([JSON.stringify(ingredients)],  "../../assets/json/grocerylist.json", {
+   /* new File([JSON.stringify(ingredients)],  "../../assets/json/grocerylist.json", {
       type: "text/json"
-    });
+    });*/
   }
 
   addToIngredientInIngredientList(ingredients: JSON[], ingredient: any) {
